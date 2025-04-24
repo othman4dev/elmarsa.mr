@@ -1,0 +1,25 @@
+@import "../../App.scss";
+.setting {
+  width: 1366px;
+  margin: auto;
+  margin-bottom: 100px;
+  display: flex;
+  gap: 100px;
+  @include mobile {
+    width: 100%;
+    flex-direction: column;
+    gap: 50px;
+  }
+  @include laptop {
+    width: 100%;
+    flex-direction: column;
+    gap: 50px;
+    padding: 20px;
+  }
+  @include monitor {
+    width: 100%;
+    flex-direction: column;
+    gap: 50px;
+    padding: 20px;
+  }
+}

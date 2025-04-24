@@ -1,0 +1,44 @@
+.mobileApp {
+  margin-top: 40px;
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    height: 176px;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .right,
+    .left {
+      min-width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 176px;
+      .text {
+        display: flex;
+        gap: 80px;
+        span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 79px;
+          height: 79px;
+          padding: 0px 15.48px 0px 15.47px;
+          flex-direction: column;
+          align-items: center;
+          flex-shrink: 0;
+          border-radius: 39.5px;
+          background: #4a4a4a;
+
+          color: #fff;
+          text-align: center;
+
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 79px; /* 329.167% */
+        }
+      }
+    }
+  }
+}

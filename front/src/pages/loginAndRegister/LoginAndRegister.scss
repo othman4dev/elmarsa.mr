@@ -1,0 +1,146 @@
+@import "../../App.scss";
+
+.login {
+  // height: 80vh;
+  width: 1366px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+  @include mobile {
+    width: 100%;
+    margin: 0px;
+    margin-bottom: 50px;
+  }
+  @include laptop {
+    width: 100%;
+    margin: 0px;
+    margin-bottom: 50px;
+  }
+  @include monitor {
+    width: 100%;
+    margin: 0px;
+    margin-bottom: 50px;
+  }
+  
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .item {
+      flex: 1;
+      display: flex;
+      padding: 16px 0px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      &.active {
+        background: var(--color-white-solid, #fff);
+        box-shadow: 1px 0px 0px 0px #e4e7e9 inset, 0px 1px 0px 0px #e4e7e9 inset,
+          0px -3px 0px 0px #fa8232 inset;
+      }
+    }
+  }
+  .loginForm {
+    display: flex;
+    flex-direction: column;
+    width: 424px;
+    min-height: 504px;
+    border-radius: 4px;
+    border: 1px solid #e4e7e9;
+    background: #fff;
+
+    box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.12);
+    .top {
+      display: flex;
+    }
+    form {
+      z-index: 1;
+      margin: 32px;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      .input {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        width: 100%;
+        z-index: 1;
+        position: relative;
+        label {
+          color: #191c1f;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px; /* 142.857% */
+        }
+        input {
+          z-index: 22;
+          height: 44px;
+          align-self: stretch;
+          border-radius: 2px;
+          border: 1px solid #e4e7e9;
+          background: #fff;
+          outline: none;
+          padding-left: 15px;
+          color: #77878f;
+          position: static;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px; /* 142.857% */
+          z-index: -1;
+        }
+        .icon {
+          color: #77878f;
+          position: absolute;
+          //right: 10px;
+          top: 50%;
+          z-index: 2;
+        }
+      }
+    }
+    .bottom {
+      margin: 0px 32px;
+      .line {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        gap: 5px;
+        hr {
+          width: 100%;
+          background: #e4e7e9;
+        }
+        span {
+          font-size: 14px;
+          color: #77878f;
+        }
+      }
+      .googleAuth {
+        // margin: 10px 0px;
+        cursor: pointer;
+        display: flex;
+        margin: 10px 0px;
+        align-items: center;
+        justify-content: space-between;
+        width: 360px;
+        height: 44px;
+        padding: 12px 114px 12px 16px;
+        border-radius: 2px;
+        border: 0.1px solid var(--Gray-100, #e4e7e9);
+        background: var(--color-white-solid, #fff);
+        img {
+          height: 20px;
+          width: 20px;
+        }
+        p {
+          font-size: 14px;
+          color: #475156;
+        }
+      }
+    }
+  }
+}

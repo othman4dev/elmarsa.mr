@@ -1,0 +1,27 @@
+.adminCategory{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    .categoryItems{
+        gap: inherit;
+        display: grid;
+        grid-template-columns: repeat(4,25%);
+        .remove{
+            position: relative;
+            display: flex;
+            &:hover{
+                .iconRemove{
+                    display: block;
+                }
+            }
+            .iconRemove{
+                position: absolute;
+                left: calc(100px/2);
+              top: calc(100px/2);
+            color: #6c97fa;
+      cursor: pointer;
+           display: none;
+            }
+        }
+    }
+}

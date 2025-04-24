@@ -1,0 +1,22 @@
+@import "../../App.scss";
+.myProduct {
+  .wrapper {
+    width: 1366px;
+    margin: auto;
+    padding: 50px;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @include mobile {
+      width: 100%;
+      padding: 20px;
+    }
+    @include laptop {
+      width: 100%;
+    }
+    @include monitor {
+      width: 100%;
+    }
+  }
+}

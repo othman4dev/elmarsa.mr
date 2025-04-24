@@ -1,0 +1,85 @@
+@import "../../App.scss";
+.aboutHero {
+  display: flex;
+  @include mobile {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .left,
+  .right {
+    flex: 1;
+  }
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    @include mobile {
+      gap: 20px;
+    }
+    span {
+      padding: 8px 16px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 2px;
+      background: #2da5f3;
+      width: fit-content;
+
+      color: #fff;
+
+      /* Body/Small/600 */
+      font-family: "Public Sans";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 20px; /* 142.857% */
+    }
+    h2 {
+      color: #191c1f;
+
+      /* Display/04 */
+      font-family: "Public Sans";
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 48px; /* 120% */
+    }
+    p {
+      color: #475156;
+
+      /* Body/Medium/400 */
+      font-family: "Public Sans";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px; /* 150% */
+    }
+    .items {
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+      li {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        span {
+          color: #191c1f;
+
+          /* Body/Medium/400 */
+          font-family: "Public Sans";
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px; /* 150% */
+        }
+      }
+    }
+  }
+  .right {
+    img {
+      object-fit: cover;
+      height: 500px;
+      width: 100%;
+    }
+  }
+}

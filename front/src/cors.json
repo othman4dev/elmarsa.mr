@@ -1,0 +1,8 @@
+[
+    {
+      "origin": ["http://46.202.175.77:5173"], 
+      "method": ["GET", "POST", "OPTIONS"],
+      "maxAgeSeconds": 3600
+    }
+  ]
+  

@@ -1,0 +1,4 @@
+VITE_FIREBASE_API_KEY="AIzaSyDucvDlnM7ZQyyRiUBz6Fnd82R3_MivoTk"
+# VITE_BASE_URL="https://cliconback-production.up.railway.app"
+VITE_BASE_URL="http://localhost:3000"
+GOOGLE_CLIENT_ID=724869396785-ttt0crjjd266lqoasakemphpbitps9ng.apps.googleusercontent.com

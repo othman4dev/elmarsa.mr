@@ -1,0 +1,146 @@
+@import "../../App.scss";
+.boosterPage {
+  min-height: 60vh;
+  width: 1366px;
+  margin: auto;
+  margin-bottom: 100px;
+  @include mobile {
+    width: 100vw;
+    margin: 0px;
+    margin-bottom: 50px;
+  }
+  @include laptop {
+    width: 100vw;
+    margin: 0px;
+    margin-bottom: 50px;
+  }
+  .top {
+    background-color: rgba(250, 130, 50, 1);
+    height: 379px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    img {
+      height: 350px;
+      width: 300px;
+    }
+  }
+  .bottom {
+    display: flex;
+    padding: 20px 294px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: #fff;
+    @include mobile {
+      width: 100%;
+      padding: 20px;
+    }
+    .info {
+      display: flex;
+      width: 730.697px;
+      flex-direction: column;
+      align-items: flex-start;
+
+      gap: 10px;
+      .title {
+        p {
+          color: #1e1e1e;
+          font-size: 34.431px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+        span {
+          color: #6e6e6e;
+          font-size: 26.779px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 149.933%; /* 40.151px */
+        }
+      }
+      .offers {
+        .offerTop {
+          display: flex;
+          
+          gap: 50px;
+          padding: 7.651px;
+          align-items: center;
+          justify-content: space-between;
+          align-self: stretch;
+          span {
+            color: #1e1e1e;
+            font-size: 26.779px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 149.962%; /* 40.159px */
+          }
+          @include mobile {
+            
+            gap: 0;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+        .offerBottom {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          margin-bottom: 20px;
+          .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+
+            .left {
+              display: flex;
+              gap: 15px;
+              align-items: center;
+              .circle {
+                width: 45.908px;
+                height: 45.908px;
+                border: #000 1.35px solid;
+                border-radius: 50%;
+              }
+              p {
+                color: #1e1e1e;
+                font-size: 34.431px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+              }
+              span {
+                color: #3e3e3e;
+                font-size: 22.954px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                letter-spacing: -0.459px;
+              }
+            }
+            .right {
+              color: #1e1e1e;
+              font-size: 34.431px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: normal;
+            }
+          }
+          .active {
+            .left {
+              .circle {
+                border: 1px solid #1b6392;
+                background: rgba(27, 99, 146, 1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

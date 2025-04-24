@@ -1,0 +1,57 @@
+@import "../../App.scss";
+.myFav {
+  width: 1366px;
+  margin: 100px auto;
+  @include mobile {
+    width: 100vw;
+    padding: 0 20px;
+    margin: 0;
+  }
+  @include laptop {
+    width: 100vw;
+    padding: 0 20px;
+    margin: 0;
+  }
+  @include monitor {
+    width: 100vw;
+    padding: 0 20px;
+    margin: 0;
+  }
+  h1 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .favProducts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    h1 {
+      font-size: 20px;
+      text-align: center;
+    }
+    @include mobile {
+      width: 100%;
+      grid-template-columns: 45% 45%;
+      .productCard {
+        width: 100%;
+      }
+    }
+    @include laptop {
+      width: 100%;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include monitor {
+      width: 100%;
+      row-gap: 20px;
+      column-gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

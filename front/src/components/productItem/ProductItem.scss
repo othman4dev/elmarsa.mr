@@ -1,0 +1,104 @@
+@import "../../App.scss";
+.productItem {
+  height: 198.667px;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1.333px solid #d0d0d0;
+  background: #fff;
+  box-shadow: 0px 0px 2.667px 0px rgba(23, 26, 31, 0.12),
+    0px 0px 1.333px 0px rgba(23, 26, 31, 0.07);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  @include mobile {
+    padding: 10px;
+    flex-direction: column;
+    height: 300px;
+  }
+  @include laptop {
+    width: 100%;
+  }
+  .left {
+    display: flex;
+    gap: 29px;
+    img {
+      width: 194.667px;
+      height: 158.667px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    .productInfo {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      span {
+        color: #828282;
+        font-size: 21.333px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 34.667px; /* 162.5% */
+      }
+      p {
+        color: #272727;
+        font-size: 29.333px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 45.333px; /* 154.545% */
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    @include mobile {
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+    }
+    img {
+      width: 29.333px;
+      height: 30.667px;
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+    .action{
+      .delete{
+        color: #fa8232;
+        cursor: pointer;
+      }
+      font-size: 30px;
+      color: grey;
+      display: flex;
+      align-items: center;
+
+    }
+    .booster {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 322.667px;
+      height: 56px;
+      flex-shrink: 0;
+      border-radius: 4px;
+      border: 1.333px solid #fef6e9;
+      background: #fef6e9;
+      box-shadow: 0px 0px 2.667px 0px rgba(23, 26, 31, 0.12),
+        0px 0px 1.333px 0px rgba(23, 26, 31, 0.07);
+      color: #fa8232;
+      font-family: Inter;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 32px; /* 160% */
+      img {
+        height: 34px;
+        width: 34px;
+      }
+    }
+  }
+}

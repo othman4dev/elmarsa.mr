@@ -1,0 +1,45 @@
+.DashboardSideBar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .user {
+    h2 {
+      color: #000;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 0.18px;
+    }
+    span {
+      color: #a4a4a4;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 0.13px;
+    }
+  }
+  .item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 60px;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    &:hover {
+      background-color: #1b629250;
+      color: #1b6392;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 0.16px;
+    }
+  }
+}

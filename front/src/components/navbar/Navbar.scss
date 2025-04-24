@@ -1,0 +1,276 @@
+@import "../../App.scss";
+.navBar {
+  height: 176px;
+  position: relative;
+  .wrapper {
+    background-color: #1b6392;
+    .top {
+      width: 1366px;
+      height: 88px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include mobile {
+        width: 100vw;
+        justify-content: end;
+        align-items: center;
+        padding: 0px 20px;
+      }
+      @include laptop {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+      }
+      @include monitor {
+        width: 100%;
+        justify-content: center;
+        gap: 30px;
+      }
+      .menu {
+        display: none;
+        @include mobile {
+          display: block;
+          position: absolute;
+          left: 10px;
+        }
+      }
+      .item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        @include mobile {
+          width: 80%;
+        }
+        img {
+          height: 48px;
+          @include mobile {
+            height: 20px;
+          }
+        }
+        span {
+          color: #fff;
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 40px;
+          letter-spacing: -0.64px;
+          @include mobile {
+            font-size: 20px;
+          }
+        }
+        .search {
+          display: flex;
+          justify-content: center;
+          padding: 14px 20px;
+          align-items: flex-start;
+          gap: 8px;
+          border-radius: 2px;
+          background-color: #fff;
+          box-shadow: 0px 8px 32px 0px rgba(0, 0, 0, 0.08);
+          input {
+            width: 578px;
+            color: #77878f;
+            border: none;
+            outline: none;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+            @include mobile {
+              width: 100%;
+            }
+            @include laptop {
+              width: 300px;
+            }
+            @include monitor {
+              width: 400px;
+            }
+          }
+          @include mobile {
+            width: 100%;
+          }
+
+          .icon {
+            height: 20px;
+            width: 20px;
+          }
+        }
+        .left {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 2px;
+          color: #fff;
+
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px; /* 142.857% */
+        }
+        hr {
+          width: 1px;
+          height: 28px;
+          opacity: 0.16;
+          background: #fff;
+        }
+        .right {
+          select {
+            background: transparent;
+            border: none;
+            outline: none;
+            display: flex;
+            width: 50px;
+            height: 20px;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            /* Body/Small/400 */
+            font-family: "Public Sans";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px; /* 142.857% */
+          }
+        }
+        p {
+          color: var(--color-white-solid, #fff);
+
+          /* Body/Small/400 */
+          font-family: "Public Sans";
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px; /* 142.857% */
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+        }
+        .card {
+          position: absolute;
+          top: 50px;
+          right: 0;
+          left: 0;
+          display: flex;
+          padding: 10px 34px 9.815px 10px;
+          flex-direction: column;
+          border-radius: 4px;
+          background: #fffdfd;
+          width: 191px;
+          gap: 16px;
+          .item {
+            display: flex;
+            gap: 8px;
+            cursor: pointer;
+            span {
+              color: #1e1e1e;
+
+              /* Body/Small/400 */
+              font-family: "Public Sans";
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 20px; /* 142.857% */
+            }
+          }
+        }
+      }
+      .user {
+        width: 191px;
+        display: flex;
+        padding: 6px var(--item-spacing-10, 10px);
+        align-items: center;
+        gap: 6px;
+        border-radius: var(--radius-4, 4px);
+        border: var(--stroke-weight-1, 1px) solid #fff;
+        p {
+          color: white;
+        }
+        @include mobile {
+          // width: 100%;
+          display: none;
+        }
+        cursor: pointer;
+      }
+      .phone-hide {
+        cursor: pointer;
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    height: 88px;
+    width: 1366px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include mobile {
+      display: none;
+    }
+    @include laptop {
+      width: 100%;
+      justify-content: space-around;
+    }
+    @include monitor {
+      width: 100%;
+      justify-content: space-around;
+    }
+    .left {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      .category {
+        width: 154px;
+        height: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--Gray-50, #f2f4f5);
+
+        border-radius: 2px;
+        select {
+          background-color: transparent;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          padding: 0px 5px;
+        }
+      }
+      .location {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        span {
+          color: #5f6c72;
+
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px; /* 142.857% */
+        }
+      }
+    }
+    .centre {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      li {
+        color: #5f6c72;
+        cursor: pointer;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 142.857% */
+      }
+    }
+  }
+}

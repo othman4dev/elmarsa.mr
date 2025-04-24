@@ -1,0 +1,80 @@
+@import "../../App.scss";
+
+.category {
+  width: 1366px;
+  margin: 100px auto;
+  @include mobile {
+    width: 100vw;
+    margin: 20px auto;
+    padding: 10px;
+  }
+  @include laptop {
+    width: 100vw;
+    margin: 20px auto;
+    padding: 10px;
+  }
+  @include monitor {
+    width: 100vw;
+    margin: 20px auto;
+    padding: 10px;
+  }
+  .featured {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    gap: 10px;
+    select {
+      width: 200px;
+      height: 40px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 0 10px;
+      margin-right: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        border-color: #888;
+      }
+
+      &:focus {
+        border-color: #555;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      }
+
+      option {
+        padding: 10px;
+        background-color: #fff;
+        color: #333;
+        &:checked,
+        &:hover,
+        &:focus {
+          background-color: #fff;
+          color: #333;
+        }
+      }
+    }
+  }
+  .categoryProducts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    h1 {
+      font-size: 20px;
+      text-align: center;
+    }
+    @include laptop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include mobile {
+      width: 100vw;
+      grid-template-columns: repeat(2, 45%);
+      .productCard {
+        width: 100%;
+      }
+    }
+    @include monitor {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

@@ -1,0 +1,71 @@
+@import "../../App.scss";
+.infoContainer {
+  flex: 2;
+  .op {
+    background-color: aqua;
+  }
+  @include mobile {
+    width: 100vw;
+    padding: 20px;
+
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    label {
+      color: #5b5061;
+      font-family: Inter;
+      font-size: 21.269px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 34.563px; /* 162.5% */
+    }
+    .inputArea {
+      display: flex;
+      height: 83.749px;
+      align-items: center;
+      border-radius: 3.988px;
+      border: 1.329px solid #d7d6d9;
+      background: #fff;
+      gap: 10px;
+      padding: 10px;
+      &:focus-within {
+        border: 1.329px solid #6c97fa;
+      }
+      input {
+        flex: 1;
+        font-family: Inter;
+        font-size: 21.269px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 34.563px; /* 162.5% */
+        border: none;
+        outline: none;
+      }
+    }
+    button {
+        cursor: pointer;
+      width: 25%;
+      align-self: flex-end;
+      display: inline-flex;
+      padding: 18.611px 91.922px 18.174px 89.731px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 3.988px;
+      border: 1.329px solid rgba(0, 0, 0, 0);
+      background:  #96b5ff;
+
+      color:  #fff;
+      font-size: 21.269px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 34.563px; /* 162.5% */
+      &:hover {
+      background:  #6c97fa;
+
+      }
+    }
+  }
+}

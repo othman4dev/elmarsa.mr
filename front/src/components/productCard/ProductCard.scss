@@ -1,0 +1,72 @@
+.productCard {
+  margin: 10px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 14px;
+  flex-shrink: 0;
+  transition: 0.5s all ease-in-out;
+  border-radius: 5px;
+  &:hover {
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.13);
+  }
+  h3 {
+    color: #fc942d;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 150% */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: end;
+    margin-bottom: 18px;
+  }
+  img {
+    cursor: pointer;
+    height: 221px;
+    width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  .info {
+    gap: 12px;
+    margin-top: 15px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    .text {
+      display: flex;
+      flex-direction: column;
+      width: 70%;
+      h2 {
+        color: #000;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22.4px; /* 140% */
+        letter-spacing: 0.15px;
+      }
+      span {
+        color: #fa8232;
+
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 100% */
+        letter-spacing: 0.15px;
+      }
+    }
+    .icon {
+      flex: 1;
+      cursor: pointer;
+      color: #9b9b9b;
+      &:hover {
+        color: #fa8232;
+      }
+    }
+  }
+}

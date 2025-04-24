@@ -1,0 +1,33 @@
+.addCategory{
+    form{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 300px;
+       label{
+        div{
+            background-color: #cec8c8;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            border-radius: 10px;
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+       }
+       #img{
+        display: none;
+       }
+       input{
+        padding: 10px;
+        border: 1px solid #6c97fa;
+        outline: none;
+        border-radius: 10px;
+       }
+    }
+}

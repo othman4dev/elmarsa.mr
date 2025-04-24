@@ -1,0 +1,55 @@
+.userTable{
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 50px;
+    .role select{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: black;
+       margin: 10px 0px;
+        &:focus {
+            outline: none;
+        }
+        
+    }
+    .userStat {
+    display: flex;
+    gap: 100px;
+
+    .userCardStat {
+      width: 282px;
+      height: 139px;
+      flex-shrink: 0;
+      border-radius: 6px;
+      border: 2px solid #eceef6;
+      background: #fff;
+      padding: 20px;
+
+      span {
+        color: #343434;
+
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 0.16px;
+      }
+      p {
+        color: #232323;
+
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 0.28px;
+      }
+    }
+  }
+}

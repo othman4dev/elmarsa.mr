@@ -1,0 +1,31 @@
+.list {
+  .dataGrid {
+  
+
+    .MuiDataGrid-columnHeaders {
+     
+      color: #565e6c;
+      
+      font-size: 12.288px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 19.31px; /* 157.143% */
+    }
+
+    .MuiDataGrid-row {
+      
+      &:hover {
+        background-color: #f9f9f9;
+      }
+    }
+
+    .MuiDataGrid-cell {
+      font-size: 0.9rem;
+     
+    }
+    .MuiButtonBase-root{
+  
+color: #F07F19;
+    }
+  }
+}

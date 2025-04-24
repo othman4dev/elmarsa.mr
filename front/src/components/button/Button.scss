@@ -1,0 +1,18 @@
+.button {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px; /* 342.857% */
+  letter-spacing: 0.168px;
+  text-transform: uppercase;
+  background: #fa8232;
+  padding: 0px 24px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
