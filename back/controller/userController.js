@@ -15,7 +15,6 @@ export const getUser = tryCatch(async (req, res) => {
     return res.status(404).json({ message: "User not found" });
   }
 
-
   if (!user) {
     throw new AppError(400, "user not found", 400);
   }
@@ -28,7 +27,6 @@ export const getUser = tryCatch(async (req, res) => {
 
 export const updateUser = tryCatch(async (req, res) => {
   let userId = req.user._id;
-
 
   // Validate input data
   const { username, email, password, oldPassword, isAdmin } =
@@ -66,7 +64,6 @@ export const updateUser = tryCatch(async (req, res) => {
 
     // Hash the new password
     hashedPassword = await bcrypt.hash(password, 10);
-
   }
 
   // Update the user
@@ -181,8 +178,6 @@ export const getUserStat = async (req, res) => {
   res.status(200).json({ formattedData });
 };
 
-
-
 // Controller function for switching the mode
 export const switchMode = async (req, res) => {
   const { userId } = req.params;
@@ -193,24 +188,26 @@ export const switchMode = async (req, res) => {
     const user = await User.findById(userId);
 
     if (!user) {
-      return res.status(404).json({ error: 'User not found' });
+      return res.status(404).json({ error: "User not found" });
     }
 
     // Change the role based on the mode
-    if (mode === 'buying') {
-      User.role = 'normal'; // Change role to 'normal' if mode is 'buying'
+    if (mode === "buying") {
+      User.role = "normal"; // Change role to 'normal' if mode is 'buying'
     } else {
-      user.role = 'store'; // Change role to 'store' for any other mode
+      user.role = "store"; // Change role to 'store' for any other mode
     }
 
     // Save the updated user
     await user.save();
 
     // Respond with the updated user
-    res.status(200).json({ message: 'User mode and role updated successfully', data: user });
+    res
+      .status(200)
+      .json({ message: "User mode and role updated successfully", data: user });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ error: 'Internal Server Error' });
+    res.status(500).json({ error: "Internal Server Error" });
   }
 };
 
@@ -252,14 +249,17 @@ export const updateUserInfos = async (req, res) => {
     }
 
     // Send the updated user back in the response
-    return res.status(200).json({ message: "User information updated successfully", updatedUser });
-
+    return res
+      .status(200)
+      .json({ message: "User information updated successfully", updatedUser });
   } catch (err) {
     console.error(err);
-    return res.status(500).json({ message: "An error occurred while updating user information", error: err.message });
+    return res.status(500).json({
+      message: "An error occurred while updating user information",
+      error: err.message,
+    });
   }
 };
-
 
 export const updatePassword = async (req, res) => {
   try {
@@ -268,7 +268,9 @@ export const updatePassword = async (req, res) => {
 
     // Check if the new password and confirm password match
     if (newPassword !== confirmPassword) {
-      return res.status(400).json({ message: "New password and confirm password do not match" });
+      return res
+        .status(400)
+        .json({ message: "New password and confirm password do not match" });
     }
 
     // Find the user by their ID
@@ -298,4 +300,11 @@ export const updatePassword = async (req, res) => {
       error: err.message,
     });
   }
+};
+
+export const returnTrue = async (req, res) => {
+  // return the 200 status
+  return res
+    .status(200)
+    .json({ message: "Suppression des données utilisateur" });
 };

@@ -3,18 +3,10 @@ import FacebookLogin from "react-facebook-login";
 
 const FacebookAuth = () => {
   const responseFacebook = (response) => {
-    window.location.href = "https://elmarsa.mr:3000/api/facebook";
+    window.location.href = "https://localhost:3000//auth/facebook";
   };
 
-  return (
-    <FacebookLogin
-      appId="1654657981818114"
-      autoLoad={false}
-      fields="name,email,picture"
-      callback={responseFacebook}
-      icon="fa-facebook"
-    />
-  );
+  return <FacebookLogin appId="1038851094238369" autoLoad={false} fields="name,email,picture" callback={responseFacebook} icon="fa-facebook" />;
 };
 
 export default FacebookAuth;

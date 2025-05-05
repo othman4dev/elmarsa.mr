@@ -21,28 +21,45 @@ const router = express.Router();
 router.post("/register", register);
 router.post("/login", login);
 router.post("/logOut", verifyToken, logOut);
-router.get("/google", passport.authenticate("google", { scope: ["profile", "email"] }));
+router.get(
+  "/google",
+  passport.authenticate("google", { scope: ["profile", "email"] })
+);
 router.get("/google/callback", googleCallback);
 router.get("/google/callbackMobile", googleCallbackMobile);
-router.get("/facebook", passport.authenticate("facebook", { scope: ["email"] }));
-router.get("/facebook/callback", facebookCallback);
-router.post("/sendWhatsappMessage", sendWhatsappMessage);
-router.post("/verifyNumberPhone", verifyUser,verifyPhoneNumber);
-router.post("/verifyPhoneNumber", verifyAndRegister); //while register
-router.post("/loginWithPhone", loginWithPhone); //while login
-router.post("/checkPhoneNumberExists", checkPhoneNumberExists);
-// Facebook Login
 router.get(
   "/facebook",
   passport.authenticate("facebook", { scope: ["email"] })
 );
+router.get("/facebook/callback", facebookCallback);
+router.post("/sendWhatsappMessage", sendWhatsappMessage);
+router.post("/verifyNumberPhone", verifyUser, verifyPhoneNumber);
+router.post("/verifyPhoneNumber", verifyAndRegister); //while register
+router.post("/loginWithPhone", loginWithPhone); //while login
+router.post("/checkPhoneNumberExists", checkPhoneNumberExists);
+// Facebook Login
+// router.get(
+//   "/facebook",
+//   passport.authenticate("facebook", { scope: ["email"] })
+// );
 
-// Facebook Callback
+// // Facebook Callback
+// router.get(
+//   "/facebook/callback",
+//   passport.authenticate("facebook", {
+//     failureRedirect: "http://localhost:5173/login",
+//     successRedirect: "http://localhost:5173/dashboard",
+//   })
+// );
+
+router.get("/auth/facebook", passport.authenticate("facebook"));
+
 router.get(
-  "/facebook/callback",
-  passport.authenticate("facebook", {
-    failureRedirect: "http://localhost:5173/login",
-    successRedirect: "http://localhost:5173/dashboard",
-  })
+  "/auth/facebook/callback",
+  passport.authenticate("facebook", { failureRedirect: "/login" }),
+  function (req, res) {
+    // Successful authentication, redirect home.
+    res.redirect("/");
+  }
 );
 export default router;
